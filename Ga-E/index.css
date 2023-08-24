@@ -1,0 +1,256 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* HEADER E NAV BAR */
+a{
+    text-decoration: none;
+    color: black;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px;
+}
+.itens{
+    display: flex;
+    width: auto;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0px 30px;
+    flex-wrap: wrap;
+}
+li{
+  padding: 0px 10px;
+  flex-wrap: wrap;
+}
+.carrinhoEItens{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-end;
+    /* flex-direction: row-reverse; */
+}
+.carrinho{
+    /* position: relative;
+    margin: 0px;
+    padding: 0px;
+    top: 0px;
+    left: 100px; */
+    box-sizing: border-box;
+}
+/* HEADER E NAV BAR FIM */
+
+/* TITULO E IMAGEM */
+.titulo{
+    font-size: calc(2.65rem + 4.7vw);
+    font-weight: 700;
+    line-height: 1.2;
+}
+.marcado{
+  color: #10dccb;
+}
+.tituloEImagens{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+.imagemInicial > .imagemHome{
+  border-radius: 50%;
+  max-width: 400px;
+}
+.esferas{
+  border-radius: 50%;
+  position: absolute;
+  top: 20vh;
+}
+.blue{
+  background-color: aqua;
+  width: 200px;
+  height: 200px;
+}
+.black{
+  background-color: rgb(0, 0, 0);
+  width: 100px;
+  height: 100px;
+}
+.mini{
+  width: 30px;
+  height: 30px;
+}
+/* TITULO E IMAGEM END*/
+
+.geral{
+    display: flex;
+    flex-direction: column;
+}
+.divDosCards{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* max-width: 70vw; */
+}
+.produtos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+/* CARTOES DE PRODUTOS */
+.card {
+    position: relative;
+    width: 340px;
+    height: 410px;
+    background: #fff;
+    border: solid 4px #333;
+    box-shadow: -5px 5px #333;
+    transition: all .2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin: 50px;
+    border-radius: 0px;
+  }
+  
+  .card:hover {
+    margin: 10px 10px 0 0;
+    box-shadow: 0px 0px #333;
+  }
+  
+  .card .img-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: filter .2s 1s ease-in-out;
+  }
+  
+  .card:hover .img-card {
+    filter: blur(1px);
+  }
+  
+  .card .add-cart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 250px;
+    font-weight: bold;
+    font-size: 19px;
+    opacity: 0;
+  }
+  
+  .card:hover .add-cart {
+    opacity: 1;
+    transition: opacity .3s 1s ease-in-out;
+  }
+  
+  .card .info-card {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: solid 1px #333;
+  }
+  
+  .card .info-card p {
+    font-size: 14px;
+    margin: 5px;
+  }
+  /* CARTOES DE PRODUTOS FIM*/
+
+/* footer */
+.elementosFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/* footer end*/
+  
+  /* SOCIAL MEDIAS */
+  .cardes {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(238, 238, 238, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  }
+  
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+  }
+  /* twitter*/
+  .containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+  }
+  /* linkdin*/
+  .containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+  }
+  /* Whatsapp*/
+  .containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+  }
+  
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+  
+  .socialSvg {
+    width: 17px;
+  }
+  
+  .socialSvg path {
+    fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  /* SOCIAL MEDIAS END */
